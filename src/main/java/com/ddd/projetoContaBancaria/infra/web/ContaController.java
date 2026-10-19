@@ -10,6 +10,7 @@ import com.ddd.projetoContaBancaria.domain.model.Moeda;
 import com.ddd.projetoContaBancaria.domain.repo.ContaRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,7 +52,7 @@ public class ContaController {
 
     @PostMapping("/transferir")
     @Operation(summary = "Realiza transferência entre duas contas")
-    public ResponseEntity<TransferenciaResponseDTO> transferir(@RequestBody TransferenciaRequestDTO requestDTO) {
+    public ResponseEntity<TransferenciaResponseDTO> transferir( @Valid @RequestBody TransferenciaRequestDTO requestDTO) {
         TransferenciaResponseDTO responseDTO = useCase.executar(requestDTO);
         return ResponseEntity.ok(responseDTO);
     }
