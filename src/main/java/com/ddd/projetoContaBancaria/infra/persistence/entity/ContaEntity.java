@@ -1,4 +1,4 @@
-package com.ddd.projetoContaBancaria.infra.persistence;
+package com.ddd.projetoContaBancaria.infra.persistence.entity;
 
 
 import jakarta.persistence.Entity;

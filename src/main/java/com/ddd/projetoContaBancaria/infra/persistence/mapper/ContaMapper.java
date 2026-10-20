@@ -1,9 +1,10 @@
-package com.ddd.projetoContaBancaria.infra.persistence;
+package com.ddd.projetoContaBancaria.infra.persistence.mapper;
 
 import com.ddd.projetoContaBancaria.domain.model.Conta;
 import com.ddd.projetoContaBancaria.domain.model.ContaID;
 import com.ddd.projetoContaBancaria.domain.model.Dinheiro;
 import com.ddd.projetoContaBancaria.domain.model.Moeda;
+import com.ddd.projetoContaBancaria.infra.persistence.entity.ContaEntity;
 
 public class ContaMapper {
 

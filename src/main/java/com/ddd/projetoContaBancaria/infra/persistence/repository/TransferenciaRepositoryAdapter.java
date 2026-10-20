@@ -1,16 +1,17 @@
-package com.ddd.projetoContaBancaria.infra.persistence;
+package com.ddd.projetoContaBancaria.infra.persistence.repository;
 
 
 import com.ddd.projetoContaBancaria.domain.model.Transferencia;
 import com.ddd.projetoContaBancaria.domain.repo.TransferenciaRepository;
+import com.ddd.projetoContaBancaria.infra.persistence.entity.TransferenciaEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class TransferenciaRepositoryPort implements TransferenciaRepository {
+public class TransferenciaRepositoryAdapter implements TransferenciaRepository {
 
     private final SpringDataTransferenciaRepository springDataTransferenciaRepository;
 
-    public TransferenciaRepositoryPort(SpringDataTransferenciaRepository springDataTransferenciaRepository) {
+    public TransferenciaRepositoryAdapter(SpringDataTransferenciaRepository springDataTransferenciaRepository) {
         this.springDataTransferenciaRepository = springDataTransferenciaRepository;
     }
 
